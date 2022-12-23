@@ -7,6 +7,7 @@ from LegendX import app
 from LegendX.core.call import Legend
 from LegendX.utils.database import set_loop
 from LegendX.utils.decorators import AdminRightsCheck
+from LegendX.utils.inline.play import close_keyboard
 
 # Commands
 STOP_COMMAND = get_command("STOP_COMMAND")
@@ -25,5 +26,6 @@ async def stop_music(cli, message: Message, _, chat_id):
     await Legend.stop_stream(chat_id)
     await set_loop(chat_id, 0)
     await message.reply_text(
-        _["admin_9"].format(message.from_user.mention)
+        _["admin_9"].format(message.from_user.first_name),
+        reply_markup=close_keyboard,
     )
