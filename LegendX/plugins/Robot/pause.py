@@ -7,6 +7,7 @@ from LegendX import app
 from LegendX.core.call import Legend
 from LegendX.utils.database import is_music_playing, music_off
 from LegendX.utils.decorators import AdminRightsCheck
+from LegendX.utils.inline.play import close_keyboard
 
 # Commands
 PAUSE_COMMAND = get_command("PAUSE_COMMAND")
@@ -27,5 +28,6 @@ async def pause_admin(cli, message: Message, _, chat_id):
     await music_off(chat_id)
     await Legend.pause_stream(chat_id)
     await message.reply_text(
-        _["admin_2"].format(message.from_user.mention)
+        _["admin_2"].format(message.from_user.first_name),
+        reply_markup=close_keyboard
     )
