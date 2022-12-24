@@ -1,22 +1,64 @@
-from pyrogram.types import InlineKeyboardButton
+import math
+
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 import config
-from LegendX.utils import time_to_sec
 
+from LegendX.utils.formatters import time_to_seconds
+
+## After Edits with Timer Bar
 
 def stream_markup_timer(_, videoid, chat_id, played, dur):
-    played_sec = time_to_sec(played)
-    total_sec = time_to_sec(dur)
 
-    x, y = str(round(played_sec/total_sec,1)).split(".")
-    pos = int(y)
+    played_sec = time_to_seconds(played)
 
-    line = "—"
-    circle = "◉"
+    duration_sec = time_to_seconds(dur)
 
-    bar = line*(pos-1)
-    bar += circle
-    bar += line*(10-len(bar))
+    percentage = (played_sec / duration_sec) * 100
+
+    anon = math.floor(percentage)
+
+    if 0 < legend <= 10:
+
+        bar = "◉—————————"
+
+    elif 10 < legend < 20:
+
+        bar = "—◉————————"
+
+    elif 20 <= legend < 30:
+
+        bar = "——◉———————"
+
+    elif 30 <= legend < 40:
+
+        bar = "———◉——————"
+
+    elif 40 <= legend < 50:
+
+        bar = "————◉—————"
+
+    elif 50 <= legend < 60:
+
+        bar = "—————◉————"
+
+    elif 60 <= legend < 70:
+
+        bar = "——————◉———"
+
+    elif 70 <= legend < 80:
+
+        bar = "———————◉——"
+
+    elif 80 <= legend < 95:
+
+        bar = "————————◉—"
+
+    else:
+
+        bar = "—————————◉"
+
+
 
     buttons = [
         [
@@ -58,19 +100,55 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     return buttons
 
 
-def telegram_markup_timer(_, chat_id, played, dur):
-    played_sec = time_to_sec(played)
-    total_sec = time_to_sec(dur)
+ef telegram_markup_timer(_, chat_id, played, dur):
 
-    x, y = str(round(played_sec/total_sec,1)).split(".")
-    pos = int(y)
+    played_sec = time_to_seconds(played)
 
-    line = "—"
-    circle = "◉"
+    duration_sec = time_to_seconds(dur)
 
-    bar = line*(pos-1)
-    bar += circle
-    bar += line*(10-len(bar))
+    percentage = (played_sec / duration_sec) * 100
+
+    anon = math.floor(percentage)
+
+    if 0 < legend <= 10:
+
+        bar = "◉—————————"
+
+    elif 10 < legend < 20:
+
+        bar = "—◉————————"
+
+    elif 20 <= legend < 30:
+
+        bar = "——◉———————"
+
+    elif 30 <= legend < 40:
+
+        bar = "———◉——————"
+
+    elif 40 <= legend < 50:
+
+        bar = "————◉—————"
+
+    elif 50 <= legend < 60:
+
+        bar = "—————◉————"
+
+    elif 60 <= legend < 70:
+
+        bar = "——————◉———"
+
+    elif 70 <= legend < 80:
+
+        bar = "———————◉——"
+
+    elif 80 <= legend < 95:
+
+        bar = "————————◉—"
+
+    else:
+
+        bar = "—————————◉"
     
     buttons = [
         [
@@ -278,6 +356,25 @@ def slider_markup(
     ]
     return buttons
 
+## Extra Shit
+
+close_keyboard = InlineKeyboardMarkup( 
+
+            [
+
+                [
+
+                    InlineKeyboardButton(
+
+                        text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+
+                    )
+
+                ]    
+
+            ]
+
+        )
 
 # Queue Markup
 
