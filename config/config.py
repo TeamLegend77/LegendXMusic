@@ -26,7 +26,7 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/OYEE_JAANU")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/YaaroKiMehfil_YKM")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/YaaroKiMehfilYKM")
 
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
 
@@ -59,7 +59,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
 # https://www.gbmb.org/mb-to-bytes
 
 STRING1 = getenv("STRING_SESSION", "BQB8Cei_RVbMyYg8LO-Qv5ZlSdzdKwWBqt-a6ncfonHSLAsQVBdjREmpc-Cm-khLQnIlx0JEJP-eG1TyiUbWnueg3ED52m3FC-rLiHOTmqrVYsGaAYSMm5CxQyC7tf0GBDs6quALghJQcvJYDRew657fSDowE_xfIGZQcM2NuZY3IhXuWmdZtKoy7hXqTUilg0ilrlth2m19w_JMeT1_FWZzG_h0iezqCGiEC8u4YBiN00_FAGkouGYa5WlFTs77aFvM9his9fqbTZ6QJQt4jmIc6UARwy0AOtZg_41QiuB6JkdicTetn5P2-U8qehqdo-Ctq1ZztRcu1gda3IjvQ5HtAAAAAUKS7JUA")
-STRING2 = getenv("STRING_SESSION2", None)
+STRING2 = getenv("STRING_SESSION2", "AQBu2XNMf9f0uOBRQvHe2umODweNm20kdj_ih4Oe5ppYgPNWTkAxJOUgzcJzmTgdOSAsof1FY8Muy03dmbmGY54QSjYgBw0Da-kcXA360js4OrXZSHTNGxb02on9QrNtmTZfO_efS_ha8h2iWoPPjs6a53hbZvDNnFBpghrOcN0D84uH0I0Zhlhl_JjtXYaQDWRBYtl1DFMCLdAa51p9MwXCLohD213cstaEtAEQ5TVxeT6sBZ0yB5ejmnddzGiwUp4ZuaQcNsYUQ8Ldu5D-JsMtCzTFKhpxeYxkYMKHqGRWg_1goW_nsqidzL47LfVPsK48orT1ra5_OJqY2zZ3VS6zAAAAAV7tdJAA")
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
@@ -76,7 +76,7 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/efff36bfbbaedcfd162fa.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/1aab2da55dd6a3e2af22c.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
