@@ -61,7 +61,16 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="➕ ᴩʟᴀʏʟɪsᴛ ➕",
+                callback_data=f"add_playlist {videoid}",
+            ),
+            InlineKeyboardButton(
+                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=f"https://t.me/YaaroKiMehfilYKM"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
             )
         ],
     ]
@@ -118,7 +127,16 @@ def telegram_markup_timer(_, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="➕ ᴩʟᴀʏʟɪsᴛ ➕",
+                callback_data=f"add_playlist {videoid}",
+            ),
+            InlineKeyboardButton(
+                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=f"https://t.me/YaaroKiMehfilYKM"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
             )
         ],
     ]
@@ -173,7 +191,16 @@ def telegram_markup(_, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="➕ ᴩʟᴀʏʟɪsᴛ ➕",
+                callback_data=f"add_playlist {videoid}",
+            ),
+            InlineKeyboardButton(
+                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=f"https://t.me/YaaroKiMehfilYKM"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
             )
         ],
     ]
