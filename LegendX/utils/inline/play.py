@@ -165,7 +165,16 @@ def stream_markup(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
+                text="➕ ᴩʟᴀʏʟɪsᴛ ➕",
+                callback_data=f"add_playlist {videoid}",
+            ),
+            InlineKeyboardButton(
+                text="🥀 sᴜᴩᴩᴏʀᴛ 🥀", url=f"https://t.me/YaaroKiMehfilYKM"
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
             )
         ],
     ]
