@@ -28,6 +28,8 @@ GIT_TOKEN = getenv("GIT_TOKEN", None)
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/OYEE_JAANU")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/YaaroKiMehfilYKM")
 
+SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
+
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "500"))
 SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180"))
 
